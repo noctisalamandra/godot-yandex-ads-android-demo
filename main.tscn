@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://bslqetug5rygj"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_s0a2b"]
+[ext_resource type="Script" path="res://addons/GodotAndroidYandexAds/yandex_ads.gd" id="2_pxh3n"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s0a2b")
+
+[node name="Rewarded" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.234
+anchor_top = 0.16
+anchor_right = 0.734
+anchor_bottom = 0.373
+offset_left = -0.568024
+offset_top = 0.319992
+offset_right = 0.431946
+offset_bottom = 0.29599
+grow_horizontal = 2
+grow_vertical = 2
+text = "Rewarded"
+
+[node name="Interstitial" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.234
+anchor_top = 0.16
+anchor_right = 0.734
+anchor_bottom = 0.373
+offset_left = -0.568024
+offset_top = 240.32
+offset_right = 0.431946
+offset_bottom = 240.296
+grow_horizontal = 2
+grow_vertical = 2
+text = "Interstitial"
+
+[node name="YandexAds" type="Node" parent="."]
+script = ExtResource("2_pxh3n")
+banner_id = "R-M-2396514-2"
+interstitial_id = "R-M-2396514-1"
+rewarded_id = "R-M-2396514-3"
+
+[connection signal="pressed" from="Rewarded" to="." method="_on_rewarded_pressed"]
+[connection signal="pressed" from="Interstitial" to="." method="_on_interstitial_pressed"]
+[connection signal="banner_loaded" from="YandexAds" to="." method="_on_yandex_ads_banner_loaded"]
+[connection signal="interstitial_loaded" from="YandexAds" to="." method="_on_yandex_ads_interstitial_loaded"]
+[connection signal="rewarded" from="YandexAds" to="." method="_on_yandex_ads_rewarded"]
+[connection signal="rewarded_video_loaded" from="YandexAds" to="." method="_on_yandex_ads_rewarded_video_loaded"]
