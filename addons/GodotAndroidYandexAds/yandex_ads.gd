@@ -49,12 +49,12 @@ func connect_signals() -> void:
 	# Banner
 	_yandex_singleton._on_banner_loaded.connect(_on_banner_loaded)
 	_yandex_singleton._on_banner_failed_to_load.connect(_on_banner_failed_to_load)
-	
+
 	# Interstitial
 	_yandex_singleton._on_interstitial_loaded.connect(_on_interstitial_loaded)
 	_yandex_singleton._on_interstitial_failed_to_load.connect(_on_interstitial_failed_to_load)
 	_yandex_singleton._on_interstitial_ad_dismissed.connect(_on_interstitial_ad_dismissed)
-	
+
 	# Rewarded
 	_yandex_singleton._on_rewarded.connect(_on_rewarded)
 	_yandex_singleton._on_rewarded_video_ad_loaded.connect(_on_rewarded_video_ad_loaded)

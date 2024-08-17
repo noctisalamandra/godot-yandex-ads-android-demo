@@ -44,9 +44,9 @@ text = "Interstitial"
 
 [node name="YandexAds" type="Node" parent="."]
 script = ExtResource("2_pxh3n")
-banner_id = "R-M-2396514-2"
-interstitial_id = "R-M-2396514-1"
-rewarded_id = "R-M-2396514-3"
+banner_id = "R-M-11555738-1"
+interstitial_id = "R-M-11555738-2"
+rewarded_id = "R-M-11555738-3"
 
 [connection signal="pressed" from="Rewarded" to="." method="_on_rewarded_pressed"]
 [connection signal="pressed" from="Interstitial" to="." method="_on_interstitial_pressed"]
