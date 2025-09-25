@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bslqetug5rygj"]
 
-[ext_resource type="Script" path="res://Main.gd" id="1_s0a2b"]
-[ext_resource type="Script" path="res://addons/GodotAndroidYandexAds/yandex_ads.gd" id="2_pxh3n"]
+[ext_resource type="Script" uid="uid://cdpmwp46kt0vq" path="res://Main.gd" id="1_s0a2b"]
+[ext_resource type="Script" uid="uid://dmulveyb0w586" path="res://addons/GodotAndroidYandexAds/yandex_ads.gd" id="2_pxh3n"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -45,6 +45,8 @@ text = "Interstitial"
 [node name="YandexAds" type="Node" parent="."]
 script = ExtResource("2_pxh3n")
 banner_id = "R-M-11555738-1"
+banner_width = 350
+banner_height = 50
 interstitial_id = "R-M-11555738-2"
 rewarded_id = "R-M-11555738-3"
 
